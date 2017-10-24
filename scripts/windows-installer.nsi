@@ -168,9 +168,9 @@ Section Mist MIST_IDX
     CreateShortCut "$SHORTCUTDIR\Uninstall.lnk" "$FILEDIR\uninstall.exe"
 
     ## Firewall - add rules
-    #SimpleFC::AdvAddRule "Weth incoming peers (TCP:30303)" ""  6 1 1 2147483647 1 "$DATADIR\binaries\Weth\unpacked\weth.exe" "" "" "Ethereum" 30303 "" "" ""
-    #SimpleFC::AdvAddRule "Weth outgoing peers (TCP:30303)" ""  6 2 1 2147483647 1 "$DATADIR\binaries\Weth\unpacked\weth.exe" "" "" "Ethereum" "" 30303 "" ""
-    #SimpleFC::AdvAddRule "Weth UDP discovery (UDP:30303)" "" 17 2 1 2147483647 1 "$DATADIR\binaries\Weth\unpacked\weth.exe" "" "" "Ethereum" "" 30303 "" ""
+    #SimpleFC::AdvAddRule "Weth incoming peers (TCP:30313)" ""  6 1 1 2147483647 1 "$DATADIR\binaries\Weth\unpacked\weth.exe" "" "" "Ethereum" 30313 "" "" ""
+    #SimpleFC::AdvAddRule "Weth outgoing peers (TCP:30313)" ""  6 2 1 2147483647 1 "$DATADIR\binaries\Weth\unpacked\weth.exe" "" "" "Ethereum" "" 30313 "" ""
+    #SimpleFC::AdvAddRule "Weth UDP discovery (UDP:30313)" "" 17 2 1 2147483647 1 "$DATADIR\binaries\Weth\unpacked\weth.exe" "" "" "Ethereum" "" 30313 "" ""
 
     # write registry strings for uninstallation
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${GROUPNAME} ${APPNAME}" "DisplayName" "${GROUPNAME} ${APPNAME}"
@@ -237,9 +237,9 @@ Section "uninstall"
     rmDir /r /REBOOTOK "$FILEDIR"
 
     ## Firewall - remove rules (if exists)
-    #SimpleFC::AdvRemoveRule "Weth incoming peers (TCP:30303)"
-    #SimpleFC::AdvRemoveRule "Weth outgoing peers (TCP:30303)"
-    #SimpleFC::AdvRemoveRule "Weth UDP discovery (UDP:30303)"
+    #SimpleFC::AdvRemoveRule "Weth incoming peers (TCP:30313)"
+    #SimpleFC::AdvRemoveRule "Weth outgoing peers (TCP:30313)"
+    #SimpleFC::AdvRemoveRule "Weth UDP discovery (UDP:30313)"
 
     # delete registry strings
     DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\${GROUPNAME} ${APPNAME}"
