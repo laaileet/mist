@@ -13,7 +13,7 @@ const version = require('../package.json').version;
 
 
 const type = options.type;
-const applicationName = (options.wallet) ? 'Ethereum Vega Wallet' : 'Mist';
+const applicationName = (options.wallet) ? 'EthereumVega Wallet' : 'Mist';
 
 
 gulp.task('clean-dist', (cb) => {
