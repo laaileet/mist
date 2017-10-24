@@ -81,7 +81,7 @@
             },
             "legacyChain": {
                 "title": "Legacy chain detected",
-                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/EthereumVega/mist/releases/0.8.2"
             }
         },
         "rightClick": {
@@ -119,8 +119,8 @@
             "runningNodeFound": "走っているEthereum nodeを見つけました!",
             "startingNode": "Ethereum ノードを開始しています。",
             "startedNode": "アプリケーションを開始しています...",
-            "nodeConnectionTimeout": "Ethereum nodeをスタート出来ませんでした!<br><small>もし<a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>Geth</a>をインストールしているならば,このコマンドを使ってみてください: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'>もしくは問題を報告して下さい。 </a></small>",
-            "nodeBinaryNotFound": "Ethereum node バイナリーが見つかりませんでした。<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> 手動でスタートして下さい。 </a> </small>",
+            "nodeConnectionTimeout": "Ethereum nodeをスタート出来ませんでした!<br><small>もし<a href='https://www.ethereum.org/cli#weth' class='button' target='_blank'>Weth</a>をインストールしているならば,このコマンドを使ってみてください: <br> <code>weth --ipcpath __path__</code></small><br> <small><a href='https://github.com/EthereumVega/mist/issues' class='button' target='_blank'>もしくは問題を報告して下さい。 </a></small>",
+            "nodeBinaryNotFound": "Ethereum node バイナリーが見つかりませんでした。<br><small> <a href='https://www.ethereum.org/cli#weth' class='button' target='_blank'> 手動でスタートして下さい。 </a> </small>",
             "nodeSyncing": "Ethereum node は同期中です...",
             "nodeSyncInfo": "blockをダウンロードしています。 __displayBlock__ of __highestBlock__.",
             "nodeSyncConnecting": "ピアーを探しています。...",

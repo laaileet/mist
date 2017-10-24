@@ -9,11 +9,11 @@ The wallet contains its own node, but can also use an already running one, if th
 
 When you start the wallet on a testnet (e.g. different `--datadir`) you need to make sure to set the `--ipcpath` back to the original one.
 
-On OSX its `~/Library/Ethereum/geth.ipc` on linux `~/.ethereum/geth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
+On OSX its `~/Library/Ethereum/weth.ipc` on linux `~/.ethereum/weth.ipc` and on windows it uses a named pipe, which doesn't need to be renamed.
 
 Example:
 
-    $ geth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/Ethereum/geth.ipc
+    $ weth --datadir /my/chain/ --networkid 23 --ipcpath ~/Library/Ethereum/weth.ipc
 
 
 
@@ -46,21 +46,21 @@ The nodes data is stored at:
 ## Issues
 
 If you find issues or have suggestion, please report them at  
-https://github.com/ethereum/meteor-dapp-wallet/issues
+https://github.com/EthereumVega/meteor-dapp-wallet/issues
 
 
 
 ## Repository
 
 The wallet code can be found at   
-https://github.com/ethereum/meteor-dapp-wallet
+https://github.com/EthereumVega/meteor-dapp-wallet
 
 And the binary application code, which wraps the wallet app can be found at   
-https://github.com/ethereum/mist/tree/wallet
+https://github.com/EthereumVega/mist/tree/wallet
 
 
 
 ## Bundling the wallet
 
 To bundle the binaries yourself follow the instructions on the mist#wallet readme  
-https://github.com/ethereum/mist/tree/wallet#deployment
+https://github.com/EthereumVega/mist/tree/wallet#deployment

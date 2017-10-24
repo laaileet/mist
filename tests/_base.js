@@ -6,7 +6,7 @@ const fs = require('fs');
 const Web3 = require('web3');
 const shell = require('shelljs');
 const path = require('path');
-const gethPrivate = require('geth-private');
+const wethPrivate = require('weth-private');
 const Application = require('spectron').Application;
 const chai = require('chai');
 const http = require('http');
@@ -21,8 +21,8 @@ process.env.TEST_MODE = 'true';
 
 const log = logger.create('base');
 
-const startGeth = function* () {
-    let gethPath;
+const startWeth = function* () {
+    let wethPath;
 
     const config = JSON.parse(
         fs.readFileSync(path.join('clientBinaries.json')).toString()
@@ -30,16 +30,16 @@ const startGeth = function* () {
     const manager = new ClientBinaryManager(config);
     yield manager.init();
 
-    if (!manager.clients.Geth.state.available) {
-        gethPath = manager.clients.Geth.activeCli.fullPath;
-        console.info('Downloading geth...');
-        const downloadedGeth = yield manager.download('Geth');
-        gethPath = downloadedGeth.client.activeCli.fullPath;
-        console.info('Geth downloaded at:', gethPath);
+    if (!manager.clients.Weth.state.available) {
+        wethPath = manager.clients.Weth.activeCli.fullPath;
+        console.info('Downloading weth...');
+        const downloadedWeth = yield manager.download('Weth');
+        wethPath = downloadedWeth.client.activeCli.fullPath;
+        console.info('Weth downloaded at:', wethPath);
     }
 
-    const geth = gethPrivate({
-        gethPath,
+    const weth = wethPrivate({
+        wethPath,
         balance: 5,
         genesisBlock: {
             config: {
@@ -48,17 +48,17 @@ const startGeth = function* () {
             difficulty: '0x01',
             extraData: '0x01',
         },
-        gethOptions: {
+        wethOptions: {
             port: 58546,
             rpcport: 58545,
         },
     });
 
-    log.info('Geth starting...');
-    yield geth.start();
-    log.info('Geth started');
+    log.info('Weth starting...');
+    yield weth.start();
+    log.info('Weth started');
 
-    return geth;
+    return weth;
 };
 
 const startFixtureServer = function (serverPort) {
@@ -96,13 +96,13 @@ exports.mocha = (_module, options) => {
                 shell.rm('-rf', e);
             });
 
-            this.geth = yield startGeth();
+            this.weth = yield startWeth();
 
             const appFileName = (options.app === 'wallet') ? 'Ethereum Wallet' : 'Mist';
             const platformArch = `${process.platform}-${process.arch}`;
 
             let appPath;
-            const ipcProviderPath = path.join(this.geth.dataDir, 'geth.ipc');
+            const ipcProviderPath = path.join(this.weth.dataDir, 'weth.ipc');
 
             switch (platformArch) {
             case 'darwin-x64':
@@ -132,7 +132,7 @@ exports.mocha = (_module, options) => {
                 args: [
                     '--loglevel', 'debug',
                     '--logfile', mistLogFile,
-                    '--node-datadir', this.geth.dataDir,
+                    '--node-datadir', this.weth.dataDir,
                     '--rpc', ipcProviderPath,
                 ],
                 webdriverLogPath: webdriverLogDir,
@@ -221,9 +221,9 @@ exports.mocha = (_module, options) => {
                 yield this.app.stop();
             }
 
-            if (this.geth && this.geth.isRunning) {
-                console.log('Stopping geth...');
-                yield this.geth.stop();
+            if (this.weth && this.weth.isRunning) {
+                console.log('Stopping weth...');
+                yield this.weth.stop();
             }
 
             if (this.httpServer && this.httpServer.isListening) {
@@ -352,10 +352,10 @@ const Utils = {
         yield Q.delay(1000);
     },
     * startMining() {
-        yield this.geth.consoleExec('miner.start();');
+        yield this.weth.consoleExec('miner.start();');
     },
     * stopMining() {
-        yield this.geth.consoleExec('miner.stop();');
+        yield this.weth.consoleExec('miner.stop();');
     },
 
     * selectTab(tabId) {

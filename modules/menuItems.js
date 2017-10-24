@@ -208,7 +208,7 @@ let menuTempl = function (webviews) {
                                     userPath += '/.web3/keys';
                                 }
 
-                            // geth
+                            // weth
                             } else {
                                 if (process.platform === 'darwin') {
                                     userPath += '/Library/Ethereum/keystore';
@@ -483,16 +483,16 @@ let menuTempl = function (webviews) {
         const nodeSubmenu = [];
 
         const ethClient = ClientBinaryManager.getClient('eth');
-        const gethClient = ClientBinaryManager.getClient('geth');
+        const wethClient = ClientBinaryManager.getClient('weth');
 
-        if (gethClient) {
+        if (wethClient) {
             nodeSubmenu.push({
-                label: `Geth ${gethClient.version}`,
-                checked: ethereumNode.isOwnNode && ethereumNode.isGeth,
+                label: `Weth ${wethClient.version}`,
+                checked: ethereumNode.isOwnNode && ethereumNode.isWeth,
                 enabled: ethereumNode.isOwnNode,
                 type: 'checkbox',
                 click() {
-                    restartNode('geth', null, 'fast', webviews);
+                    restartNode('weth', null, 'fast', webviews);
                 },
             });
         }
@@ -565,14 +565,14 @@ let menuTempl = function (webviews) {
         ] });
 
     // Light mode switch should appear when not in Solo Mode (dev network)
-    if (ethereumNode.isOwnNode && ethereumNode.isGeth && !ethereumNode.isDevNetwork) {
+    if (ethereumNode.isOwnNode && ethereumNode.isWeth && !ethereumNode.isDevNetwork) {
         devToolsMenu.push({
             label: 'Sync with Light client (beta)',
             enabled: true,
             checked: ethereumNode.isLightMode,
             type: 'checkbox',
             click() {
-                restartNode('geth', null, (ethereumNode.isLightMode) ? 'fast' : 'light');
+                restartNode('weth', null, (ethereumNode.isLightMode) ? 'fast' : 'light');
             },
         });
     }
@@ -652,17 +652,17 @@ let menuTempl = function (webviews) {
     helpMenu.push({
         label: i18n.t('mist.applicationMenu.help.mistWiki'),
         click() {
-            shell.openExternal('https://github.com/ethereum/mist/wiki');
+            shell.openExternal('https://github.com/EthereumVega/mist/wiki');
         },
     }, {
         label: i18n.t('mist.applicationMenu.help.gitter'),
         click() {
-            shell.openExternal('https://gitter.im/ethereum/mist');
+            shell.openExternal('https://gitter.im/EthereumVega/mist');
         },
     }, {
         label: i18n.t('mist.applicationMenu.help.reportBug'),
         click() {
-            shell.openExternal('https://github.com/ethereum/mist/issues');
+            shell.openExternal('https://github.com/EthereumVega/mist/issues');
         },
     });
 

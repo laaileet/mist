@@ -102,7 +102,7 @@
             },
             "legacyChain": {
                 "title": "Cadena 'legacy' detectada",
-                "description": "El teu node està actualment a la cadena d'Ethereum Classic. Per utilitzar aquesta cadena, utilitza les eines proporcionades pel projecte ethereum classic a\nhttps://ethereumclassic.github.io.\n\nPer canviar a la cadena principal d'ethereum segueix el aquest tutorial:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+                "description": "El teu node està actualment a la cadena d'Ethereum Classic. Per utilitzar aquesta cadena, utilitza les eines proporcionades pel projecte ethereum classic a\nhttps://ethereumclassic.github.io.\n\nPer canviar a la cadena principal d'ethereum segueix el aquest tutorial:\nhttps://github.com/EthereumVega/mist/releases/0.8.2"
             }
         },
         "rightClick": {
@@ -147,8 +147,8 @@
             "startingNode": "Iniciant node d'Ethereum...",
             "stoppingNode": "Aturant node d'Ethereum...",
             "startedNode": "Iniciant l'aplicació...",
-            "nodeConnectionTimeout": "No s'ha pogut iniciar el node d'Ethereum!<br><small>Si has <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>instal·lat Geth</a>, utilitza aquesta comanda per executar-lo: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> O notifica l'error </a></small>",
-            "nodeBinaryNotFound": "No s'ha torbat el binari del node d'Ethereum!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Si us plau inicia'n un manualment primer. </a> </small>",
+            "nodeConnectionTimeout": "No s'ha pogut iniciar el node d'Ethereum!<br><small>Si has <a href='https://www.ethereum.org/cli#weth' class='button' target='_blank'>instal·lat Weth</a>, utilitza aquesta comanda per executar-lo: <br> <code>weth --ipcpath __path__</code></small><br> <small><a href='https://github.com/EthereumVega/mist/issues' class='button' target='_blank'> O notifica l'error </a></small>",
+            "nodeBinaryNotFound": "No s'ha torbat el binari del node d'Ethereum!<br><small> <a href='https://www.ethereum.org/cli#weth' class='button' target='_blank'> Si us plau inicia'n un manualment primer. </a> </small>",
             "nodeStarting": "Node d'Ethereum iniciant-se...",
             "nodeStarted": "Node d'Ethereum iniciat",
             "nodeConnected": "Node d'Ethereum connectat",

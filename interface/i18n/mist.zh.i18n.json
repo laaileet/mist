@@ -81,7 +81,7 @@
             },
             "legacyChain": {
                 "title": "Legacy chain detected",
-                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/EthereumVega/mist/releases/0.8.2"
             }
         },
         "rightClick": {
@@ -119,8 +119,8 @@
             "runningNodeFound": "发现正在运行的以太坊节点！",
             "startingNode": "正在开启以太坊节点……",
             "startedNode": "正在启动应用程序……",
-            "nodeConnectionTimeout": "无法开启以太坊节点！<br><small>如果你已经<a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>安装Geth</a>，使用此命令运行： <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> 或者上报此问题 </a></small>",
-            "nodeBinaryNotFound": "找不到以太坊节点安装文件！<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> 请事先手动开启一个节点 </a> </small>",
+            "nodeConnectionTimeout": "无法开启以太坊节点！<br><small>如果你已经<a href='https://www.ethereum.org/cli#weth' class='button' target='_blank'>安装Weth</a>，使用此命令运行： <br> <code>weth --ipcpath __path__</code></small><br> <small><a href='https://github.com/EthereumVega/mist/issues' class='button' target='_blank'> 或者上报此问题 </a></small>",
+            "nodeBinaryNotFound": "找不到以太坊节点安装文件！<br><small> <a href='https://www.ethereum.org/cli#weth' class='button' target='_blank'> 请事先手动开启一个节点 </a> </small>",
             "nodeSyncing": "需要同步以太坊节点，请等待……",
             "nodeSyncInfo": "正在下载第__displayBlock__块，共__highestBlock__。",
             "nodeSyncConnecting": "正在查找节点……",

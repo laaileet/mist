@@ -34,7 +34,7 @@ const argv = require('yargs')
         node: {
             demand: false,
             default: null,
-            describe: 'Node to use: geth, eth',
+            describe: 'Node to use: weth, eth',
             requiresArg: true,
             nargs: 1,
             type: 'string',
@@ -66,9 +66,9 @@ const argv = require('yargs')
             type: 'string',
             group: 'Mist options:',
         },
-        gethpath: {
+        wethpath: {
             demand: false,
-            describe: 'Path to Geth executable to use instead of default.',
+            describe: 'Path to Weth executable to use instead of default.',
             requiresArg: true,
             nargs: 1,
             type: 'string',
@@ -118,7 +118,7 @@ const argv = require('yargs')
         syncmode: {
             demand: false,
             requiresArg: true,
-            describe: 'Geth synchronization mode: [fast|light|full]',
+            describe: 'Weth synchronization mode: [fast|light|full]',
             nargs: 1,
             type: 'string',
             group: 'Mist options:',
@@ -141,7 +141,7 @@ const argv = require('yargs')
             type: 'boolean',
         },
         '': {
-            describe: 'To pass options to the underlying node (e.g. Geth) use the --node- prefix, e.g. --node-datadir',
+            describe: 'To pass options to the underlying node (e.g. Weth) use the --node- prefix, e.g. --node-datadir',
             group: 'Node options:',
         },
     })
@@ -228,8 +228,8 @@ class Settings {
         return argv.swarmurl;
     }
 
-    get gethPath() {
-        return argv.gethpath;
+    get wethPath() {
+        return argv.wethpath;
     }
 
     get ethPath() {
@@ -273,13 +273,13 @@ class Settings {
         ipcPath = this.userHomePath;
 
         if (process.platform === 'darwin') {
-            ipcPath += '/Library/Ethereum/geth.ipc';
+            ipcPath += '/Library/Ethereum/weth.ipc';
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-            ipcPath += '/.ethereum/geth.ipc';
+            ipcPath += '/.ethereum/weth.ipc';
         } else if (process.platform === 'win32') {
-            ipcPath = '\\\\.\\pipe\\geth.ipc';
+            ipcPath = '\\\\.\\pipe\\weth.ipc';
         }
 
         this._log.debug(`IPC path: ${ipcPath}`);

@@ -1,24 +1,24 @@
 # Mist Browser
 
-[![Join the chat at https://gitter.im/ethereum/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereum/mist?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status develop branch](https://travis-ci.org/ethereum/mist.svg?branch=develop)](https://travis-ci.org/ethereum/mist)
-[![Code Climate](https://codeclimate.com/github/ethereum/mist/badges/gpa.svg)](https://codeclimate.com/github/ethereum/mist)
+[![Join the chat at https://gitter.im/EthereumVega/mist](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/EthereumVega/mist?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status develop branch](https://travis-ci.org/EthereumVega/mist.svg?branch=develop)](https://travis-ci.org/EthereumVega/mist)
+[![Code Climate](https://codeclimate.com/github/EthereumVega/mist/badges/gpa.svg)](https://codeclimate.com/github/EthereumVega/mist)
 
 The Mist browser is the tool of choice to browse and use Ðapps.
 
 For the Mist API see the [MISTAPI.md](MISTAPI.md).
 
-Please note that this repository is the Electron host for the Meteor based wallet dapp whose repository is located here: https://github.com/ethereum/meteor-dapp-wallet.
+Please note that this repository is the Electron host for the Meteor based wallet dapp whose repository is located here: https://github.com/EthereumVega/meteor-dapp-wallet.
 
 ## Help and troubleshooting
 
-Please check the [Mist troubleshooting guide](https://github.com/ethereum/mist/wiki).
+Please check the [Mist troubleshooting guide](https://github.com/EthereumVega/mist/wiki).
 
-Or the [Gitter Channel](https://gitter.im/ethereum/mist), to connect with the community for instant help.
+Or the [Gitter Channel](https://gitter.im/EthereumVega/mist), to connect with the community for instant help.
 
 ## Installation
 
-If you want to install the app from a pre-built version on the [release page](https://github.com/ethereum/mist/releases),
+If you want to install the app from a pre-built version on the [release page](https://github.com/EthereumVega/mist/releases),
 you can simply run the executeable after download.
 
 For updating simply download the new version and copy it over the old one (keep a backup of the old one if you want to be sure).
@@ -57,7 +57,7 @@ Install the latter ones via:
 
 Now you're ready to initialise Mist for development:
 
-    $ git clone https://github.com/ethereum/mist.git
+    $ git clone https://github.com/EthereumVega/mist.git
     $ cd mist
     $ yarn
 
@@ -79,7 +79,7 @@ In the original window you can then start Mist with:
     $ cd mist
     $ yarn dev:electron
 
-*NOTE: client-binaries (e.g. [geth](https://github.com/ethereum/go-ethereum)) specified in [clientBinaries.json](https://github.com/ethereum/mist/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
+*NOTE: client-binaries (e.g. [weth](https://github.com/ethereum/go-ethereum)) specified in [clientBinaries.json](https://github.com/EthereumVega/mist/blob/master/clientBinaries.json) will be checked during every startup and downloaded if out-of-date, binaries are stored in the [config folder](#config-folder)*
 
 *NOTE: use `--help` to display available options, e.g. `--loglevel debug` (or `trace`) for verbose output*
 
@@ -109,9 +109,9 @@ $ yarn dev:electron --rpc http://localhost:8545
 ```
 
 
-### Passing options to Geth
+### Passing options to Weth
 
-You can pass command-line options directly to Geth by prefixing them with `--node-` in
+You can pass command-line options directly to Weth by prefixing them with `--node-` in
 the command-line invocation:
 
 ```bash
@@ -122,14 +122,14 @@ The `--rpc` Mist option is a special case. If you set this to an IPC socket file
 path then the `--ipcpath` option automatically gets set, i.e.:
 
 ```bash
-$ yarn dev:electron --rpc /my/geth.ipc
+$ yarn dev:electron --rpc /my/weth.ipc
 ```
 
 ...is the same as doing...
 
 
 ```bash
-$ yarn dev:electron --rpc /my/geth.ipc --node-ipcpath /my/geth.ipc
+$ yarn dev:electron --rpc /my/weth.ipc --node-ipcpath /my/weth.ipc
 ```
 
 ### Creating a local private net
@@ -144,13 +144,13 @@ To run a private network you will need to set the IPC path, network id and data
 folder:
 
 ```bash
-$ yarn dev:electron --rpc ~/Library/Ethereum/geth.ipc --node-networkid 1234 --node-datadir ~/Library/Ethereum/privatenet
+$ yarn dev:electron --rpc ~/Library/Ethereum/weth.ipc --node-networkid 1234 --node-datadir ~/Library/Ethereum/privatenet
 ```
 
 _NOTE: since `ipcpath` is also a Mist option you do not need to also include a
 `--node-ipcpath` option._
 
-You can also launch `geth` separately with the same options prior starting
+You can also launch `weth` separately with the same options prior starting
 Mist.
 
 
@@ -178,7 +178,7 @@ To generate the binaries for Mist run:
 
     $ gulp
 
-To generate the Ethereum Wallet (this will pack the one Ðapp from https://github.com/ethereum/meteor-dapp-wallet):
+To generate the Ethereum Wallet (this will pack the one Ðapp from https://github.com/EthereumVega/meteor-dapp-wallet):
 
     $ gulp --wallet
 

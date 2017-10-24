@@ -81,7 +81,7 @@
             },
             "legacyChain": {
                 "title": "Legacy chain detected",
-                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/ethereum/mist/releases/0.8.2"
+                "description": "Your node is currently on the unsupported Ethereum Classic chain. To use this chain use tools provided by the ethereum classic project at\nhttps://ethereumclassic.github.io.\n\nTo revert to the main ethereum chain follow the tutorial here:\nhttps://github.com/EthereumVega/mist/releases/0.8.2"
             }
         },
         "rightClick": {
@@ -120,8 +120,8 @@
             "startingNode": "Starter Ethereum-node...",
             "stoppingNode": "Stopper Ethereum-node...",
             "startedNode": "Starter applikasjonen...",
-            "nodeConnectionTimeout": "Kunne ikke starte Ethereum-node!<br><small>Hvis du <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'>installerte Geth</a>, bruk denne kommandoen for å kjøre det: <br> <code>geth --ipcpath __path__</code></small><br> <small><a href='https://github.com/ethereum/mist/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
-            "nodeBinaryNotFound": "Ingen Ethereum-node kilde funnet!<br><small> <a href='https://www.ethereum.org/cli#geth' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
+            "nodeConnectionTimeout": "Kunne ikke starte Ethereum-node!<br><small>Hvis du <a href='https://www.ethereum.org/cli#weth' class='button' target='_blank'>installerte Weth</a>, bruk denne kommandoen for å kjøre det: <br> <code>weth --ipcpath __path__</code></small><br> <small><a href='https://github.com/EthereumVega/mist/issues' class='button' target='_blank'> Eller rapporter et problem </a></small>",
+            "nodeBinaryNotFound": "Ingen Ethereum-node kilde funnet!<br><small> <a href='https://www.ethereum.org/cli#weth' class='button' target='_blank'> Vennligst start en manuelt først. </a> </small>",
             "nodeStarting": "Ethereum-node starter opp...",
             "nodeStarted": "Ethereum-node startet",
             "nodeConnected": "Ethereum-node tilkoblet",

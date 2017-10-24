@@ -363,7 +363,7 @@ onReady = () => {
                     message: global.i18n.t('mist.errors.legacyChain.title'),
                     detail: global.i18n.t('mist.errors.legacyChain.description')
                 }, () => {
-                    shell.openExternal('https://github.com/ethereum/mist/releases');
+                    shell.openExternal('https://github.com/EthereumVega/mist/releases');
                     app.quit();
                 });
 
@@ -388,7 +388,7 @@ onReady = () => {
                 throw new Error('Either the node didn\'t start or IPC socket failed to connect.');
             }
 
-            /* At this point Geth is running and the socket is connected. */
+            /* At this point Weth is running and the socket is connected. */
             log.info('Connected via IPC to node.');
 
             // update menu, to show node switching possibilities
@@ -399,7 +399,7 @@ onReady = () => {
         })
         .then(function onboarding(resultData) {
 
-            if (ethereumNode.isGeth && (resultData.result === null || (_.isArray(resultData.result) && resultData.result.length === 0))) {
+            if (ethereumNode.isWeth && (resultData.result === null || (_.isArray(resultData.result) && resultData.result.length === 0))) {
                 log.info('No accounts setup yet, lets do onboarding first.');
 
                 return new Q((resolve, reject) => {
@@ -470,7 +470,7 @@ onReady = () => {
         })
         .catch((err) => {
             log.error('Error starting up node and/or syncing', err);
-        }); /* socket connected to geth */
+        }); /* socket connected to weth */
     }; /* kick start */
 
     if (splashWindow) {
