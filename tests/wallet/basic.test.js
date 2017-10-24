@@ -12,7 +12,7 @@ test['Title test'] = function* () {
     const client = this.client;
 
     yield client.waitUntilWindowLoaded();
-    (yield client.getTitle()).should.eql('EthereumVega Wallet');
+    (yield client.getTitle()).should.eql('Ethereum Wallet');
 }
 
 test['account balances'] = function* () {
