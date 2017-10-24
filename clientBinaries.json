@@ -1,15 +1,15 @@
 {
     "clients": {
         "Weth": {
-            "version": "1.7.2",
+            "version": "1.9.0",
             "platforms": {
                 "linux": {
                     "x64": {
                         "download": {
-                            "url": "https://wethstore.blob.core.windows.net/builds/weth-linux-amd64-1.7.2-1db4ecdc.tar.gz",
+                            "url": "https://github.com/EthereumVega/weth/releases/download/1.9.0/weth-linux-amd64-1.9.0-wjcloud.tar.gz",
                             "type": "tar",
-                            "md5": "cc4a666fd21ae3627ee8ae974650b2f7",
-                            "bin": "weth-linux-amd64-1.7.2-1db4ecdc/weth"
+                            "md5": "d37a7e6e4e042fbf40964e35976b8b58",
+                            "bin": "weth-linux-amd64-1.9.0-wjcloud/weth"
                         },
                         "bin": "weth",
                         "commands": {
@@ -19,17 +19,17 @@
                                 ],
                                 "output": [
                                     "Weth",
-                                    "1.7.2"
+                                    "1.9.0"
                                 ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://wethstore.blob.core.windows.net/builds/weth-linux-386-1.7.2-1db4ecdc.tar.gz",
+                            "url": "https://wethstore.blob.core.windows.net/builds/weth-linux-386-1.9.0-1db4ecdc.tar.gz",
                             "type": "tar",
                             "md5": "84b3a2d491db6f79fd84daa242da9ec6",
-                            "bin": "weth-linux-386-1.7.2-1db4ecdc/weth"
+                            "bin": "weth-linux-386-1.9.0-1db4ecdc/weth"
                         },
                         "bin": "weth",
                         "commands": {
@@ -39,7 +39,7 @@
                                 ],
                                 "output": [
                                     "Weth",
-                                    "1.7.2"
+                                    "1.9.0"
                                 ]
                             }
                         }
@@ -48,10 +48,10 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://wethstore.blob.core.windows.net/builds/weth-darwin-amd64-1.7.2-1db4ecdc.tar.gz",
+                            "url": "https://wethstore.blob.core.windows.net/builds/weth-darwin-amd64-1.9.0-1db4ecdc.tar.gz",
                             "type": "tar",
                             "md5": "1220015825ee8772aada37353aa3f7ef",
-                            "bin": "weth-darwin-amd64-1.7.2-1db4ecdc/weth"
+                            "bin": "weth-darwin-amd64-1.9.0-1db4ecdc/weth"
                         },
                         "bin": "weth",
                         "commands": {
@@ -61,7 +61,7 @@
                                 ],
                                 "output": [
                                     "Weth",
-                                    "1.7.2"
+                                    "1.9.0"
                                 ]
                             }
                         }
@@ -70,10 +70,10 @@
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "https://wethstore.blob.core.windows.net/builds/weth-windows-amd64-1.7.2-1db4ecdc.zip",
+                            "url": "https://github.com/EthereumVega/weth/releases/download/1.9.0/weth-windows-amd64-1.9.0-wjcloud.zip",
                             "type": "zip",
-                            "md5": "b34d22226c2d8c6729b4c01a2f25f818",
-                            "bin": "weth-windows-amd64-1.7.2-1db4ecdc\\weth.exe"
+                            "md5": "57cb23c3724736ca9f9a16d0e4e56b5b",
+                            "bin": "weth-windows-amd64-1.9.0-wjcloud\\weth.exe"
                         },
                         "bin": "weth.exe",
                         "commands": {
@@ -83,17 +83,17 @@
                                 ],
                                 "output": [
                                     "Weth",
-                                    "1.7.2"
+                                    "1.9.0"
                                 ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://wethstore.blob.core.windows.net/builds/weth-windows-386-1.7.2-1db4ecdc.zip",
+                            "url": "https://wethstore.blob.core.windows.net/builds/weth-windows-386-1.9.0-1db4ecdc.zip",
                             "type": "zip",
                             "md5": "50b353bf3639a502b06e0098c751df67",
-                            "bin": "weth-windows-386-1.7.2-1db4ecdc\\weth.exe"
+                            "bin": "weth-windows-386-1.9.0-1db4ecdc\\weth.exe"
                         },
                         "bin": "weth.exe",
                         "commands": {
@@ -103,7 +103,7 @@
                                 ],
                                 "output": [
                                     "Weth",
-                                    "1.7.2"
+                                    "1.9.0"
                                 ]
                             }
                         }
