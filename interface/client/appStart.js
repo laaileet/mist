@@ -27,8 +27,8 @@ mistInit = function () {
 
             Tabs.insert({
                 _id: 'browser',
-                url: 'https://ethereum.org',
-                redirect: 'https://ethereum.org',
+                url: 'https://ethereumvega.org',
+                redirect: 'https://ethereumvega.org',
                 position: 0
             });
         } else {
@@ -45,8 +45,8 @@ mistInit = function () {
             { _id: 'wallet' },
             {
                 $set: {
-                    url: 'https://wallet.ethereum.org',
-                    redirect: 'https://wallet.ethereum.org',
+                    url: 'https://wallet.ethereumvega.org',
+                    redirect: 'https://wallet.ethereumvega.org',
                     position: 1,
                     permissions: {
                         admin: true

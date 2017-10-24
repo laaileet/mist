@@ -205,7 +205,7 @@ class Settings {
     }
 
     get appName() {
-        return this.uiMode === 'mist' ? 'Mist' : 'Ethereum Wallet';
+        return this.uiMode === 'mist' ? 'Mist' : 'Ethereum Vega Wallet';
     }
 
     get appLicense() {
@@ -273,11 +273,11 @@ class Settings {
         ipcPath = this.userHomePath;
 
         if (process.platform === 'darwin') {
-            ipcPath += '/Library/Ethereum/weth.ipc';
+            ipcPath += '/Library/EthereumVega/weth.ipc';
         } else if (process.platform === 'freebsd' ||
        process.platform === 'linux' ||
        process.platform === 'sunos') {
-            ipcPath += '/.ethereum/weth.ipc';
+            ipcPath += '/.ethereumvega/weth.ipc';
         } else if (process.platform === 'win32') {
             ipcPath = '\\\\.\\pipe\\weth.ipc';
         }

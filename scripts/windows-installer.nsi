@@ -26,7 +26,7 @@ CRCCheck on
 RequestExecutionLevel admin
 
 !searchreplace APPNAMENOHYPEN ${APPNAME} "-" " "
-!define GROUPNAME "Ethereum"
+!define GROUPNAME "Ethereum Vega"
 !define HELPURL "https://github.com/EthereumVega/mist/releases/issues"
 !define UPDATEURL "https://github.com/EthereumVega/mist/releases"
 !define ABOUTURL "https://ethereum.org"
@@ -65,7 +65,7 @@ ${EndIf}
 
     SetShellVarContext current
     StrCpy $DATADIR "$APPDATA\${APPNAME}"
-    StrCpy $NODEDATADIR "$APPDATA\Ethereum"
+    StrCpy $NODEDATADIR "$APPDATA\Ethereum Vega"
     StrCpy $SHORTCUTDIR "$SMPROGRAMS\${APPNAMENOHYPEN}"
     StrCpy $DESKTOPDIR "$DESKTOP"
 
