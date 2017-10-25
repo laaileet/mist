@@ -190,54 +190,6 @@
 
   !endif
 
-  !ifdef LANG_TRADCHINESE
-
-  StrCmp $LANGUAGE ${LANG_TRADCHINESE} 0 +11
-
-    Push "  ¿ù»~: %s"
-    Push "µLªk¨ú±oÀÉ®×ÄÝ©Ê¡C"
-    Push "¿ù»~: µLªk¨ú±oÀÉ®×ÄÝ©Ê¡C"
-    Push "µLªk¸ÑÀ£ÁY %s"
-    Push "  ¿ù»~¡GµLªk¸ÑÀ£ÁY %s"
-    
-    !ifdef FILE_<ALL>
-      Push "  ¸ÑÀ£ÁY¡G%s"
-      Push "  ¥¿¦b¸ÑÀ£ÁY %d ÀÉ®×»P¥Ø¿ý"
-      Push "¥¿¦b¸ÑÀ£ÁY %s ªº¤º®e¨ì %s"
-    !else
-      Push "«ü©wªºÀÉ®×¨Ã¤£¦s¦b©óÀ£ÁY¥]¡C"
-      Push "¿ù»~¡G«ü©wªºÀÉ®×¨Ã¤£¦s¦b©óÀ£ÁY¥]¡C"
-      Push "¥¿¦b¸ÑÀ£ÁYÀÉ®× %s ¡A±q %s ¨ì %s"
-    !endif
-    
-    Push "/TRANSLATE"
-
-  !endif
-
-  !ifdef LANG_SIMPCHINESE
-
-  StrCmp $LANGUAGE ${LANG_SIMPCHINESE} 0 +11
-
-    Push "  ´íÎó: %s"
-    Push "ÎÞ·¨È¡µÃÎÄ¼þÊôÐÔ¡£"
-    Push "´íÎó: ÎÞ·¨È¡µÃÎÄ¼þÊôÐÔ¡£"
-    Push "ÎÞ·¨½âÑ¹Ëõ %s"
-    Push "  ´íÎó£ºÎÞ·¨½âÑ¹Ëõ %s"
-    
-    !ifdef FILE_<ALL>
-      Push "  ½âÑ¹Ëõ£º%s"
-      Push "  ÕýÔÚ½âÑ¹Ëõ %d ÎÄ¼þÓëÄ¿Â¼"
-      Push "ÕýÔÚ½âÑ¹Ëõ %s µÄÄÚÈÝµ½ %s"
-    !else
-      Push "Ö¸¶¨µÄÎÄ¼þ²¢²»´æÔÚÓÚÑ¹Ëõ°ü¡£"
-      Push "´íÎó£ºÖ¸¶¨µÄÎÄ¼þ²¢²»´æÔÚÓÚÑ¹Ëõ°ü¡£"
-      Push "ÕýÔÚ½âÑ¹ËõÎÄ¼þ %s £¬´Ó %s µ½ %s"
-    !endif
-    
-    Push "/TRANSLATE"
-
-  !endif
-
   !ifdef LANG_LITHUANIAN
 
     StrCmp $LANGUAGE ${LANG_LITHUANIAN} 0 +10
@@ -280,76 +232,6 @@
         Push "Plik nie istnieje w archiwum"
         Push "B³¹d: Plik nie istnieje w archiwum"
         Push "Rozpakowywanie pliku %s z %s do %s"
-      !endif
-
-      Push "/TRANSLATE"
-
-  !endif
-
-  !ifdef "LANG_KOREAN"
-    strcmp $LANGUAGE ${LANG_KOREAN} 0 +10
-      Push "  ¿À·ù : %s"
-      Push "È­ÀÏ ¼Ó¼ºÀ» ¾ò¾î¿Ã ¼ö ¾ø½À´Ï´Ù."
-      Push "¿À·ù: È­ÀÏ ¼Ó¼ºÀ» ¾ò¾î¿Ã ¼ö ¾ø½À´Ï´Ù."
-      Push "%sÀ»(¸¦) Ç® ¼ö ¾ø½À´Ï´Ù."
-      Push "  ¿À·ù: %sÀ»(¸¦) Ç® ¼ö ¾ø½À´Ï´Ù."
-
-      !ifdef FILE_<ALL>
-        Push "  Ç®±â : %s"
-        Push "  %d°³ÀÇ ÆÄÀÏ°ú Æú´õ¸¦ Çª´Â Áß"
-        Push "%sÀÇ ³»¿ëÀ» %s¿¡ Çª´Â Áß"
-      !else
-        Push "ÁöÁ¤µÈ ÆÄÀÏÀÌ ¾ÐÃà ÆÄÀÏ ¾È¿¡ ¾ø½À´Ï´Ù."
-        Push "¿À·ù: ÁöÁ¤µÈ ÆÄÀÏÀÌ ¾ÐÃà ÆÄÀÏ ¾È¿¡ ¾ø½À´Ï´Ù."
-        Push "%s ÆÄÀÏÀ» %s¿¡¼­ %s·Î Çª´Â Áß"
-      !endif
-
-      Push "/TRANSLATE"
-
-  !endif
-
-  !ifdef "LANG_RUSSIAN"
-
-    strcmp $LANGUAGE ${LANG_RUSSIAN} 0 +10
-
-      Push "  Îøèáêà: %s"
-      Push "Íå ìîãó ïîëó÷èòü àòðèáóòû ôàéëà."
-      Push "Îøèáêà: Íå ìîãó ïîëó÷èòü àòðèáóòû ôàéëà."
-      Push "Íå ìîãó èçâëå÷ü %s"
-      Push "  Îøèáêà: Íå ìîãó èçâëå÷ü %s"
-
-      !ifdef LANG_<ALL>
-        Push "  Èçâëåêàþ : %s"
-        Push "  Èçâëå÷åíèå %d ôàéëîâ è ïàïîê"
-        Push "Ñïèñîê èçâëåêàåìûõ ôàéëîâ èç %s â %s"
-      !else
-        Push "Èçâëåêàåìûé ôàéë íå îáíàðóæåí â àðõèâå."
-        Push "Îøèáêà: SÈçâëåêàåìûé ôàéë íå îáíàðóæåí â àðõèâå."
-        Push "Èçâëå÷åíèå ôàéëà %s èç %s â %s"
-      !endif
-
-      Push "/TRANSLATE"
-
-  !endif
-
-  !ifdef LANG_ARABIC
-
-    StrCmp $LANGUAGE ${LANG_ARABIC} 0 +10
-
-      Push "  ÎØÇÁ: %s"
-      Push "áã íÍÕá Úáì ÎÕÇÆÕ ÇáãáÝ."
-      Push "ÎØÇÁ: áã íÍÕá Úáì ÎÕÇÆÕ ÇáãáÝ."
-      Push "áÇ íãßä ÇÓÊÎÑÇÌ %s"
-      Push " ÎØÇÁ: áÇ íãßä ÇÓÊÎÑÇÌ %s"
-  
-      !ifdef FILE_<ALL>
-        Push "  ÇÓÊÎÑÇÌ : %s"
-        Push "  ÇÓÊÎÑÇÌ ãÌáÏÇÊ æ ãáÝÇÊ %d"
-        Push "ÇÓÊÎÑÇÌ ãÍÊæíÇÊ %s Åáì %s"
-      !else
-        Push "ÇáãáÝ ÛíÑ ãæÌæÏ Ýí ÇáÓÌá."
-        Push "ÎØÇÁ: ÇáãáÝ ÛíÑ ãæÌæÏ Ýí ÇáÓÌá."
-        Push "ÇÓÊÎÑÇÌ ÇáãáÝ %s ãä %s Åáì %s"
       !endif
 
       Push "/TRANSLATE"
